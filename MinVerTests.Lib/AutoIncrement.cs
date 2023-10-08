@@ -14,6 +14,7 @@ namespace MinVerTests.Lib
         [InlineData("1.2.3", VersionPart.Major, "2.0.0-alpha.0.1")]
         [InlineData("1.2.3", VersionPart.Minor, "1.3.0-alpha.0.1")]
         [InlineData("1.2.3", VersionPart.Patch, "1.2.4-alpha.0.1")]
+        [InlineData("1.2.3", VersionPart.Disable, "1.2.3-alpha.0.1")]
         public static async Task RtmVersionIncrement(string tag, VersionPart autoIncrement, string expectedVersion)
         {
             // arrange
