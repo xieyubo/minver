@@ -2,13 +2,7 @@
 
 ![MinVer](https://raw.githubusercontent.com/adamralph/minver/28ce6ec69c4489c034f7eea78665a0cc9980eb81/assets/minver.svg)
 
-_[![MinVer NuGet version](https://img.shields.io/nuget/v/MinVer.svg?style=flat&label=nuget%3A%20MinVer)](https://www.nuget.org/packages/MinVer)_
-_[![minver-cli NuGet version](https://img.shields.io/nuget/v/minver-cli.svg?style=flat&label=nuget%3A%20minver-cli)](https://www.nuget.org/packages/minver-cli)_
-
-_[![Build status](https://github.com/adamralph/minver/workflows/.github/workflows/ci.yml/badge.svg)](https://github.com/adamralph/minver/actions/workflows/ci.yml?query=branch%3Amain)_
-_[![CodeQL analysis](https://github.com/adamralph/minver/workflows/.github/workflows/codeql-analysis.yml/badge.svg)](https://github.com/adamralph/minver/actions/workflows/codeql-analysis.yml?query=branch%3Amain)_
-_[![Lint](https://github.com/adamralph/minver/workflows/.github/workflows/lint.yml/badge.svg)](https://github.com/adamralph/minver/actions/workflows/lint.yml?query=branch%3Amain)_
-_[![Spell check](https://github.com/adamralph/minver/workflows/.github/workflows/spell-check.yml/badge.svg)](https://github.com/adamralph/minver/actions/workflows/spell-check.yml?query=branch%3Amain)_
+_[![MinVer NuGet version](https://img.shields.io/nuget/v/XYB.MinVer.svg?style=flat&label=nuget%3A%20XYB.MinVer)](https://www.nuget.org/packages/XYB.MinVer)_
 
 A minimalist [.NET package](https://www.nuget.org/packages/MinVer) for versioning .NET SDK-style projects using Git tags.
 
@@ -119,6 +113,7 @@ Note that the names of the MSBuild properties and environment variables are case
 - [Can I use my own branching strategy?](#can-i-use-my-own-branching-strategy) _(yes)_
 - [Can I include build metadata in the version?](#can-i-include-build-metadata-in-the-version) _(yes)_
 - [Can I auto-increment the minor or major version after an RTM tag instead of the patch version?](#can-i-auto-increment-the-minor-or-major-version-after-an-rtm-tag-instead-of-the-patch-version) _(yes)_
+- [Can I disable auto-increment version and only apply height?](#can-i-disable-auto-increment-version-and-only-apply-height) _(yes)_
 - [Can I change the default pre-release identifiers from `alpha.0` to something else?](#can-i-change-the-default-pre-release-identifiers-from-alpha0-to-something-else) _(yes)_
 - [Can I use the version calculated by MinVer for other purposes?](#can-i-use-the-version-calculated-by-minver-for-other-purposes) _(yes)_
 - [Can I version multiple projects in a single repository independently?](#can-i-version-multiple-projects-in-a-single-repository-independently) _(yes)_
@@ -243,6 +238,10 @@ You can also specify build metadata in a version tag. If the tag is on the curre
 ### Can I auto-increment the minor or major version after an RTM tag instead of the patch version?
 
 Yes! Specify which part of the version to auto-increment with `MinVerAutoIncrement`. By default, [MinVer will auto-increment the patch version](#how-it-works), but you can specify `minor` or `major` to increment the minor or major version instead.
+
+### Can I disable auto-increment version and only apply height?
+
+Yes! Specify `MinVerAutoIncrement` to `disable`.
 
 ### Can I change the default pre-release identifiers from `alpha.0` to something else?
 
