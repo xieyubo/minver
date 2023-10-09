@@ -3,7 +3,7 @@
   <PropertyGroup>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <DefineConstants>$(DefineConstants);MINVER</DefineConstants>
-    <Description>Minimalist versioning for .NET SDK-style projects using Git tags.</Description>
+    <Description>Minimalist versioning for .NET SDK-style projects using Git tags (modified from https://github.com/adamralph/minver by xyb).</Description>
     <DevelopmentDependency>true</DevelopmentDependency>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IncludeBuildOutput>false</IncludeBuildOutput>
@@ -12,9 +12,10 @@
     <OutputType>Exe</OutputType>
     <PackageIcon>minver.png</PackageIcon>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/adamralph/minver</PackageProjectUrl>
+    <PackageId>XYB.MinVer</PackageId>
+    <PackageProjectUrl>https://github.com/xieyubo/minver</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageReleaseNotes>https://github.com/adamralph/minver/blob/main/CHANGELOG.md</PackageReleaseNotes>
+    <PackageReleaseNotes>https://github.com/xieyubo/minver/blob/main/CHANGELOG.md</PackageReleaseNotes>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <RollForward>major</RollForward>
     <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>

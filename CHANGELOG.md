@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.3.0.1
+
+### Enhancements
+
+- Support disable MinVerAutoIncrement.
+
 ## 4.3.0
 
 ### Enhancements

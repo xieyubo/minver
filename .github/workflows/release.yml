@@ -1,7 +1,7 @@
 name: release
 on:
   push:
-    tags: ["*.*.*"]
+    tags: ["*.*.*.*"]
 env:
   DOTNET_NOLOGO: true
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
@@ -14,11 +14,11 @@ jobs:
           dotnet-version: 7.0.100
       - uses: actions/checkout@v3.3.0
       - env:
-          MINVER_VERSION: ${{ secrets.MINVER_VERSION }}
+          MINVER_VERSION: ${{ github.ref_name }}
         run: ./build build
       - name: push
         env:
-          SOURCE: ${{ secrets.NUGET_PUSH_SOURCE }}
+          SOURCE: nuget.org
           API_KEY: ${{ secrets.NUGET_PUSH_API_KEY }}
         if: env.SOURCE != '' || env.API_KEY != ''
-        run: dotnet nuget push ./**/*.nupkg --source ${{ env.SOURCE }} --api-key ${{ env.API_KEY }}
+        run: dotnet nuget push ./MinVer/bin/Release/*.nupkg --source ${{ env.SOURCE }} --api-key ${{ env.API_KEY }}

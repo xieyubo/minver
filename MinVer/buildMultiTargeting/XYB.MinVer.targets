@@ -2,5 +2,5 @@
   <PropertyGroup>
     <MSBuildAllProjects Condition="'$(MSBuildAssemblyVersion)' == '' Or '$(MSBuildAssemblyVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
-  <Import Project="../build/MinVer.targets" />
+  <Import Project="../build/XYB.MinVer.targets" />
 </Project>

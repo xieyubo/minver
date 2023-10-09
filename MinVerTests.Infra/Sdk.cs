@@ -65,9 +65,9 @@ namespace MinVerTests.Infra
             _ = await DotNet($"new classlib --name {name} --output {path}{(multiTarget ? " --langVersion 8.0" : "")}", path).ConfigureAwait(false);
 
             var source = Solution.GetFullPath($"MinVer/bin/{configuration}/");
-            var minVerPackageVersion = Path.GetFileNameWithoutExtension(Directory.EnumerateFiles(source, "*.nupkg").First()).Split("MinVer.", 2)[1];
+            var minVerPackageVersion = Path.GetFileNameWithoutExtension(Directory.EnumerateFiles(source, "*.nupkg").First()).Split("XYB.MinVer.", 2)[1];
 
-            _ = await DotNet($"add package MinVer --source {source} --version {minVerPackageVersion} --package-directory packages", path).ConfigureAwait(false);
+            _ = await DotNet($"add package XYB.MinVer --source {source} --version {minVerPackageVersion} --package-directory packages", path).ConfigureAwait(false);
 
             if (multiTarget)
             {
